@@ -12,10 +12,14 @@ let page = 1;
 
 async function searchImages(){
     keyword = searchBox.value
-    const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}`;
+    const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}&per_page=12`;
 
     const response = await fetch(url);
     const data = await response.json();
+
+    if (page === 1) {
+        searchResult.innerHTML = ""
+    }
 
     const results = data.results;
 
@@ -28,8 +32,10 @@ async function searchImages(){
 
         imageLink.appendChild(image);
         searchResult.appendChild(imageLink);
-        
+
     })
+
+    showMoreBtn.style.display = "block"
 }
 
 
@@ -39,3 +45,8 @@ searchForm.addEventListener("submit" , (e) => {
     searchImages()
 })
 
+
+showMoreBtn.addEventListener("click" , () => {
+    page++;
+    searchImages();
+})
