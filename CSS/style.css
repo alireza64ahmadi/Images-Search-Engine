@@ -5,8 +5,8 @@
     box-sizing: border-box;
 }
 body{
-    background: #39297b;
-    color: #fff;
+    background: #cad1e1;
+    color: #262630;
 }
 h1{
     text-align: center;
@@ -18,7 +18,7 @@ form{
     max-width: 600px;
     margin: auto;
     height: 80px;
-    background: #434989;
+    background: #b8bece;
     display: flex;
     align-items: center;
     border-radius: 8px;
@@ -29,14 +29,14 @@ form input{
     border: 0;
     outline: 0;
     background-color: transparent;
-    color: #fff;
+    color: #262630;
     font-size: 18px;
     padding: 0 30px;
 }
 form button{
     padding: 0 40px ;
     height: 100%;
-    background: #ff3929;
+    background: #262630;
     color: #fff;
     font-size: 18px;
     outline: 0;
@@ -47,7 +47,7 @@ form button{
 
 }
 ::placeholder{
-    color: #fff;
+    color: #262630;
     font-size: 18px;
 }
 #show-more-btn{
